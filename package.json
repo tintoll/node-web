@@ -1,0 +1,24 @@
+{
+  "name": "node-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha $(find ./ -name \"*.spec.js\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tintoll/node-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tintoll/node-web/issues"
+  },
+  "homepage": "https://github.com/tintoll/node-web#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.3"
+  }
+}
