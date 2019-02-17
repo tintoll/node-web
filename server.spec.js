@@ -1,8 +1,8 @@
-const should = require('should');
-const server = require('./server');
+const should = require("should");
+const server = require("./server");
 
-describe('server test suite', () => {
-  it('should return "hello world"', () => {
-    server().should.be.equal('Hello World');
+describe("server test suite", () => {
+  it('should return "Hello World"', () => {
+    server().should.be.equal("Hello World");
   });
-})
+});
