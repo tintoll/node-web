@@ -15,3 +15,11 @@
 ```
  curl localhost:5000 -v
 ```
+
+## 4강
+- url : http://blog.jeonghwan.net/series/2018/12/04/node-web-4_application.html
+- http를 직접 사용하지 않고 Application 객체로 추상화 하였음. 
+### mocha
+- mocha는 테스트 코드를 실행해주는 테스트 러너입니다. 
+- descirbe(): 테스트 꾸러미(Test Suite)라고 하며 테스트 환경을 기술함
+- it(): 테스트 케이스(Test Case)라고 하며 단위 테스트를 정의함
