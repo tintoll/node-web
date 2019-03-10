@@ -21,6 +21,12 @@ const Middleware = () => {
                     nextMw(err, _req, _res, next) :
                     _run(i+1, err);
         }
+
+        if(nextMw._path) {
+            const pathMatched = _req.path === nextMw._path;
+            return pathMatched ? nextMw(_req, _res, next) : _run(i + 1);
+        }
+
         nextMw(_req, _res, next);
     };
 
