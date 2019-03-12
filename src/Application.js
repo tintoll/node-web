@@ -2,6 +2,7 @@ const http = require('http');
 const debug = require('../utils/debug')('Application');
 const Middleware = require('./Middleware');
 const Response = require('./Response');
+const Request = require("./Request");
 
 
 // 모듈 패턴은 자바스크립트 객체를 반환하는데요
@@ -9,7 +10,7 @@ const Application = () => {
   const _middleware = Middleware();
 
   const _server = http.createServer((req, res) => {
-    _middleware.run(req, Response(res));
+    _middleware.run(Request(req), Response(res));
   });
 
   const use = (path, fn) => {

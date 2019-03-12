@@ -5,7 +5,15 @@ const posts = [
 ];
 
 const index = () => (req, res, next) => {
-  res.status(200).json(posts);
+  // 문자열을 숫자형으로 변환 req.query.limit * 1
+  // || 2; 는 기본값 설정 
+  const limit = req.query.limit * 1 || 2; 
+  const page = req.query.page * 1 || 1;
+
+  const begin = (page - 1) * limit;
+  const end = begin + limit;
+
+  res.status(200).json(posts.slice(begin,end));
 }
 
 module.exports = {
