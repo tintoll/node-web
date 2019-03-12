@@ -5,8 +5,7 @@ const posts = [
 ];
 
 const index = () => (req, res, next) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify(posts)); // 문자열로 보낼때는 자바스크립트 객체를 문자열로 변환해줘야함.
+  res.status(200).json(posts);
 }
 
 module.exports = {
