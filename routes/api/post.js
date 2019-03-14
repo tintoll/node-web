@@ -16,6 +16,11 @@ const index = () => (req, res, next) => {
   res.status(200).json(posts.slice(begin,end));
 }
 
+const create = () => (req, res, next) => {
+  debug(`create() ${req.body}`);
+};
+
 module.exports = {
-  index
+  index,
+  create
 }
