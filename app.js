@@ -5,12 +5,14 @@ const logger = require('./middlewares/logger');
 const error = require('./routes/error');
 const index = require('./routes/index');
 const apiPost = require('./routes/api/post');
+const bodyParser = require('./middlewares/body-parser');
 
 const app =  App();
 
 app.use(logger());
+app.use(bodyParser());
 app.use(serveStatic());
-app.use('/', index.listPosts());
+app.get('/', index.listPosts());
 app.get('/api/posts', apiPost.index());
 app.post("/api/posts", apiPost.create());
 app.use(error.error404());
